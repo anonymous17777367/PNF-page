@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Anonymous">
+  <meta name="description" content="Anonymous supplementary material with interactive 3D comparisons and evaluation results.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:title" content="Anonymous Supplementary Material">
+  <meta property="og:description" content="Interactive geometry comparisons and evaluation results.">
+  <meta property="og:type" content="website">
+  <title>Anonymous Supplementary Material</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <header class="paper-header container" id="top">
+      <h1 id="title">Anonymous Supplementary Material</h1>
+      <p class="authors">Anonymous submission</p>
+      <div class="paper-links">
+        <a class="paper-button" href="#overview">Interactive viewer</a>
+      </div>
+    </header>
+
+    <section class="case-showcase container" id="overview" aria-labelledby="noise-title" data-explorer="Noise and outliers">
+      <p class="showcase-description">Interactive comparisons of reconstructed surfaces. Select a shape and methods, then inspect the results from a shared viewpoint.</p>
+      <h2 id="noise-title">Noise + outliers</h2>
+      <div class="explorer-host"></div>
+      <noscript><p class="noscript-note">Enable JavaScript to compare paper, 1275, flower and fish. The abstract and figures remain available below.</p></noscript>
+    </section>
+
+    <section class="case-showcase container" id="non-manifold" aria-labelledby="non-manifold-title" data-explorer="Non-manifold junctions">
+      <h2 id="non-manifold-title">Non-manifold</h2>
+      <div class="explorer-host"></div>
+    </section>
+
+    <template id="explorer-template">
+      <div class="explorer-block">
+        <div class="explorer-topbar">
+          <div class="case-tabs" data-role="case-tabs" role="group" aria-label="Shape"></div>
+          <span class="demo-badge" data-role="data-badge">AUTHOR-PROVIDED MODELS</span>
+        </div>
+        <div class="method-bar" data-role="method-bar">
+          <span class="method-bar-label">Methods</span>
+          <div class="method-chips" data-role="method-chips"></div>
+          <span class="method-hint" data-role="method-hint"></span>
+        </div>
+        <div class="viewer-grid" data-role="viewer-grid" data-columns="3"></div>
+        <div class="viewer-toolbar"><div class="toolbar-group"><button data-role="sync-toggle" class="tool-button selected" aria-pressed="true"><span aria-hidden="true">⇄</span> Sync views</button><span class="toolbar-separator"></span><div class="mode-buttons" role="group" aria-label="Rendering mode"><button class="tool-button selected" data-mode="surface" aria-pressed="true">Surface</button><button class="tool-button" data-mode="wireframe" aria-pressed="false">Wireframe</button><button class="tool-button" data-mode="points" aria-pressed="false">Points</button></div></div><div class="toolbar-group"><button data-role="rotate-toggle" class="tool-button" aria-pressed="false">Auto-rotate</button><button data-role="reset-view" class="tool-button" title="Reset this comparison">Reset</button><button data-role="capture" class="tool-button" title="Download this comparison as PNG">Save image</button></div></div>
+        <details class="advanced-controls"><summary>Inspection controls <span>clipping · points · alignment</span></summary><div class="advanced-grid"><label><input data-role="clip-toggle" type="checkbox"> Section cut <span class="field-hint">display cut, not a UDF slice</span></label><label>Cut position <input data-role="clip-position" type="range" min="-1.8" max="1.8" value="0" step="0.01" aria-label="Section cut position"></label><label>Point size <input data-role="point-size" type="range" min="0.008" max="0.055" value="0.018" step="0.001" aria-label="Point size"></label><label><input data-role="alignment-toggle" type="checkbox" checked> Shared coordinates <span class="field-hint">disable only for independent inspection</span></label></div></details>
+        <p class="viewer-note"><span data-role="case-description"></span><span class="interaction-hint">Drag to orbit · Scroll to zoom · Right-drag to pan</span></p>
+        <p data-role="viewer-status" class="viewer-status" role="status" aria-live="polite">Loading models…</p>
+      </div>
+    </template>
+
+    <section class="abstract-section paper-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="container">
+        <h2 id="abstract-title">Abstract</h2>
+        <div class="abstract-copy"><p>This supplementary material examines surface reconstruction from point samples without consistent normal orientation. A local tensor representation estimates normal axes and their confidence before a separate integration stage constructs an unsigned distance approximation. The examples above compare precomputed outputs on noisy inputs and non-manifold geometry. Shared camera controls help inspect local structure, while the reported distance metrics provide a complementary quantitative view. No reconstruction or metric evaluation is performed in the browser.</p></div>
+      </div>
+    </section>
+
+    <section class="paper-section container" id="teaser" aria-labelledby="teaser-title">
+      <h2 id="teaser-title">Reconstruction under noise and outliers</h2>
+      <figure class="method-figure">
+        <a class="method-image-link" href="./assets/figures/teaser.png" target="_blank" rel="noopener" aria-label="View comparison at full resolution"><img class="method-image" src="./assets/figures/teaser.png" width="1990" height="705" loading="lazy" decoding="async" alt="Corrupted input, our reconstruction, distance-field cross-sections, and competing reconstructions."></a>
+        <figcaption><p><strong>Visual comparison.</strong> Top: corrupted input, our reconstruction, and distance-field cross-sections. Warmer input colors indicate greater corruption. Bottom: competing reconstructions.</p><a class="figure-full-size" href="./assets/figures/teaser.png" target="_blank" rel="noopener">Full resolution</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="paper-section container method-section" id="method" aria-labelledby="method-title">
+      <h2 id="method-title">Method Overview</h2>
+      <figure class="method-figure">
+        <a class="method-image-link" href="./assets/figures/figure2.png" target="_blank" rel="noopener" aria-label="View Figure 2 at full resolution"><img class="method-image" src="./assets/figures/figure2.png" width="3168" height="680" loading="lazy" decoding="async" alt="Two-stage reconstruction of a 2D Y-shaped point cloud: initialization, projector construction, tensor optimization, normal-axis decoding with confidence, and unsigned distance-field construction."></a>
+        <figcaption><p><strong>Figure 2:</strong> Two-stage reconstruction on a 2D Y-shaped point cloud. Given unoriented samples (a), Stage I initializes random normal axes (b), encodes them as rank-one projectors (c), and optimizes their soft relaxation using tangent-plane fitting, soft-PCA anchoring, and overlap regularization (d). Principal eigenvectors yield the decoded normal axes, while eigengaps provide confidence values (e). Bidirectional arrows represent unoriented axes; colors in (e) indicate confidence, which is lower near the junction, where multiple branch directions compete, and higher along the regular branches. Stage II applies confidence-guided heat diffusion followed by Poisson integration to construct the UDF approximation (f).</p></figcaption>
+      </figure>
+    </section>
+
+    <section class="paper-section container results-section" id="results" aria-labelledby="results-title">
+      <h2 id="results-title">Quantitative Results</h2>
+      <p class="section-intro">Reported directed Chamfer and Hausdorff distances on 60 shapes, averaged per shape, under five input conditions.</p>
+      <div class="results-toolbar"><label class="condition-label">Input condition <select id="condition-select"><option value="clean">Clean samples</option><option value="noise03">Noise · 0.3%</option><option value="noise08">Noise · 0.8%</option><option value="outliers02">Outliers · 2%</option><option value="outliers05">Outliers · 5%</option></select></label><span class="source-label">Precomputed evaluation results</span></div>
+      <div class="results-layout">
+        <div class="chart-block"><div class="chart-heading"><span>Directed Chamfer distance</span><span>× 10⁻³ · lower is better</span></div><div id="results-chart" class="bar-chart" aria-label="Directed Chamfer distance bar chart"></div></div>
+        <div class="table-wrap"><table><caption class="visually-hidden">Reported mean per-shape directed CD and HD under the selected input condition</caption><thead><tr><th scope="col">Method</th><th scope="col">CD ↓</th><th scope="col">HD ↓</th></tr></thead><tbody id="results-table"></tbody></table></div>
+      </div>
+      <p class="results-footnote">Arithmetic means of per-shape distances, directed from the reference geometry to the reconstruction, in units of 10⁻³. Reference: ground-truth mesh where available, otherwise the original clean point cloud. Bold marks the lowest value per metric. These precomputed values are not calculated by the viewer above.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>Anonymous supplementary material</p><a class="footer-top" href="#top">Back to top<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m-5 5 5-5 5 5"/></svg></a></div></footer>
+</body>
+</html>

@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 2,
+  "cases": [
+    {
+      "id": "case-01",
+      "group": "Noise and outliers",
+      "title": "paper",
+      "description": "Author-provided noise and outlier outputs for paper. Models retain their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "input",
+          "label": "Input points",
+          "src": "assets/models/case-01/model-01.ply",
+          "bytes": 2351337,
+          "default": true,
+          "points": true
+        },
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-01/model-02.ply",
+          "bytes": 23414605,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-01/model-03.ply",
+          "bytes": 12919353,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-01/model-04.ply",
+          "bytes": 10779741,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-01/model-05.ply",
+          "bytes": 7255733,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA+HM",
+          "src": "assets/models/case-01/model-06.ply",
+          "bytes": 18259211,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-01/model-07.ply",
+          "bytes": 14501742,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-01/model-08.ply",
+          "bytes": 15778923,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-02",
+      "group": "Noise and outliers",
+      "title": "1275",
+      "description": "Author-provided noise and outlier outputs for 1275. Models retain their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "input",
+          "label": "Input points",
+          "src": "assets/models/case-02/model-01.ply",
+          "bytes": 1179464,
+          "default": true,
+          "points": true
+        },
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-02/model-02.ply",
+          "bytes": 22437924,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-02/model-03.ply",
+          "bytes": 9051431,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-02/model-04.ply",
+          "bytes": 15680774,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-02/model-05.ply",
+          "bytes": 7388174,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA+HM",
+          "src": "assets/models/case-02/model-06.ply",
+          "bytes": 20178630,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-02/model-07.ply",
+          "bytes": 14268146,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-02/model-08.ply",
+          "bytes": 16346357,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-03",
+      "group": "Noise and outliers",
+      "title": "flower",
+      "description": "Author-provided noise and outlier outputs for flower. Models retain their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "input",
+          "label": "Input points",
+          "src": "assets/models/case-03/model-01.ply",
+          "bytes": 1163992,
+          "default": true,
+          "points": true
+        },
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-03/model-02.ply",
+          "bytes": 6487427,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-03/model-03.ply",
+          "bytes": 3889313,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-03/model-04.ply",
+          "bytes": 5395252,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-03/model-05.ply",
+          "bytes": 2263683,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA+HM",
+          "src": "assets/models/case-03/model-06.ply",
+          "bytes": 9298237,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-03/model-07.ply",
+          "bytes": 4848499,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-03/model-08.ply",
+          "bytes": 8465135,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-04",
+      "group": "Noise and outliers",
+      "title": "fish",
+      "description": "Author-provided noise and outlier outputs for fish. Models retain their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "input",
+          "label": "Input points",
+          "src": "assets/models/case-04/model-01.ply",
+          "bytes": 2354441,
+          "default": true,
+          "points": true
+        },
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-04/model-02.ply",
+          "bytes": 6988084,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-04/model-03.ply",
+          "bytes": 4433435,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-04/model-04.ply",
+          "bytes": 4817631,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-04/model-05.ply",
+          "bytes": 2460171,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA+HM",
+          "src": "assets/models/case-04/model-06.ply",
+          "bytes": 7051777,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-04/model-07.ply",
+          "bytes": 5262949,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-04/model-08.ply",
+          "bytes": 7131183,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-05",
+      "group": "Non-manifold junctions",
+      "title": "Cross junction",
+      "description": "Author-provided non-manifold junctions outputs for Cross junction. All files are displayed in their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-05/model-01.ply",
+          "bytes": 7726653,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-05/model-02.ply",
+          "bytes": 582525,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-05/model-03.ply",
+          "bytes": 5844163,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-05/model-04.ply",
+          "bytes": 3240041,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA",
+          "src": "assets/models/case-05/model-05.ply",
+          "bytes": 5468697,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-05/model-06.ply",
+          "bytes": 5350134,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-05/model-07.ply",
+          "bytes": 5360533,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-06",
+      "group": "Non-manifold junctions",
+      "title": "Multiple junctions",
+      "description": "Author-provided non-manifold junctions outputs for Multiple junctions. All files are displayed in their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-06/model-01.ply",
+          "bytes": 14136693,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-06/model-02.ply",
+          "bytes": 2893622,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-06/model-03.ply",
+          "bytes": 11552258,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-06/model-04.ply",
+          "bytes": 6355910,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA",
+          "src": "assets/models/case-06/model-05.ply",
+          "bytes": 11230834,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-06/model-06.ply",
+          "bytes": 10789512,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-06/model-07.ply",
+          "bytes": 10572950,
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "case-07",
+      "group": "Non-manifold junctions",
+      "title": "Henneberg surface",
+      "description": "Author-provided non-manifold junctions outputs for Henneberg surface. All files are displayed in their original coordinates with one shared scale and translation; no registration is applied.",
+      "models": [
+        {
+          "key": "capudf",
+          "label": "CAP-UDF",
+          "src": "assets/models/case-07/model-01.ply",
+          "bytes": 14690241,
+          "default": false
+        },
+        {
+          "key": "deudf",
+          "label": "DEUDF",
+          "src": "assets/models/case-07/model-02.ply",
+          "bytes": 4041797,
+          "default": false
+        },
+        {
+          "key": "diffudf",
+          "label": "DiffUDF",
+          "src": "assets/models/case-07/model-03.ply",
+          "bytes": 15399958,
+          "default": false
+        },
+        {
+          "key": "geoudf",
+          "label": "GeoUDF",
+          "src": "assets/models/case-07/model-04.ply",
+          "bytes": 8013525,
+          "default": true
+        },
+        {
+          "key": "pca",
+          "label": "PCA",
+          "src": "assets/models/case-07/model-05.ply",
+          "bytes": 14773688,
+          "default": false
+        },
+        {
+          "key": "ours",
+          "label": "Ours",
+          "src": "assets/models/case-07/model-06.ply",
+          "bytes": 14680974,
+          "default": true,
+          "ours": true
+        },
+        {
+          "key": "vad",
+          "label": "VAD",
+          "src": "assets/models/case-07/model-07.ply",
+          "bytes": 14669572,
+          "default": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+node_modules/
+.runtime/
+.playwright-cli/
+.browser-cache/
+__pycache__/
+*.log
+*.zip
+*.pdf
+*.ps1
+*.map
+.env*
+.DS_Store
+Thumbs.db
