@@ -266,7 +266,14 @@ export class ComparisonViewer {
       const geometry = node.geometry.clone().applyMatrix4(node.matrixWorld);
       const count = geometry.getAttribute('position').count;
       pointCount += count;
-      const pointMaterial = new THREE.PointsMaterial({ color: slot.color, size: this.pointSize, sizeAttenuation: true });
+      const useInputColors = slot.key === 'input' && geometry.hasAttribute('color');
+      const pointMaterial = new THREE.PointsMaterial({
+        color: useInputColors ? 0xffffff : slot.color,
+        vertexColors: useInputColors,
+        size: this.pointSize,
+        sizeAttenuation: true,
+        toneMapped: !useInputColors,
+      });
       if (node.isPoints) {
         nativePoints.add(new THREE.Points(geometry, pointMaterial));
       } else {
